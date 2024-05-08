@@ -69,21 +69,21 @@ class _SynonymScreenState extends State<SynonymScreen> {
             SizedBox(height: 16.0),
             _synonyms == null
                 ? Expanded(
-              child: Center(
-                child: Text('No synonyms found'),
-              ),
-            )
+                    child: Center(
+                      child: Text('No synonyms found'),
+                    ),
+                  )
                 : Expanded(
-              child: ListView.builder(
-                itemCount: _synonyms!.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(_synonyms![index].word),
-                    subtitle: Text('Score: ${_synonyms![index].score}'),
-                  );
-                },
-              ),
-            ),
+                    child: ListView.builder(
+                      itemCount: _synonyms!.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(_synonyms![index].word),
+                          subtitle: Text('Score: ${_synonyms![index].score}'),
+                        );
+                      },
+                    ),
+                  ),
           ],
         ),
       ),
